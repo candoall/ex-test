@@ -1,0 +1,55 @@
+<h3>Ticket Details</h3>
+
+<p>
+  <strong>Request Number:</strong>
+  <%= @ticket.request_number %>
+</p>
+
+<p>
+  <strong>Sequence Number:</strong>
+  <%= @ticket.sequence_number %>
+</p>
+
+<p>
+  <strong>Request Type:</strong>
+  <%= @ticket.request_type %>
+</p>
+
+<p>
+  <strong>Response Due Date Time:</strong>
+  <%= @ticket.response_due_date_time %>
+</p>
+<p>
+  <strong>PrimaryServiceAreaCode:</strong>
+  <%= @ticket.primary_service_area_code %>
+</p>
+
+<p>
+  <strong>Additional Service Area Codes:</strong>
+  <%= @ticket.additional_service_area_codes %>
+</p>
+<h4>Excavator Details</h4>
+<p>
+  <strong>Company Name:</strong>
+  <%= @ticket.company_name %>
+</p>
+<p>
+  <strong>Street:</strong>
+  <%= @ticket.street %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%= @ticket.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @ticket.state %>
+</p>
+<p>
+  <strong>Zip:</strong>
+  <%= @ticket.zip %>
+</p>
+
+<div id="map" class="<%=@ticket.id %>" data='<%= @ticket.coordinates.to_json %>'></div>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maksim-test</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpmhvjB2bKlvS5aa-8W5xb8BtyZVmHY-s&libraries=places"></script>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+
+</html>

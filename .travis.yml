@@ -1,0 +1,15 @@
+language: ruby
+services:
+  - postgresql
+rbenv:
+  - '2.5.1'
+env:
+  - DB=postgresql
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
+before_script:
+  - psql -c 'create database excavator_test;' -U postgres
+
+bundler_args: --binstubs=./bundler_stubs

@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: localhost
+  database: excavator_developement
+  username: postgres
+  password: postgres
+
+
+test: &test
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: localhost
+  database: excavator_test
+  username: postgres
+  password: postgres
+
+cucumber:
+  <<: *test

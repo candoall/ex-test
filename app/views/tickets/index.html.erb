@@ -1,0 +1,29 @@
+<h1 class="text-center primary">Listing Tickets</h1>
+
+<div class="row">
+  <div class="container">
+    <div class="col-md-12">
+      <table class="table table-responsive table-stripe">
+        <tr>
+          <th>Request Number</th>
+          <th>Sequence Number</th>
+          <th>Request Type</th>
+          <th>Response Due Date Time</th>
+          <th>Primary Service AreaCode</th>
+          <th></th>
+        </tr>
+
+        <% @tickets.each do |ticket| %>
+          <tr>
+            <td><%= ticket.request_number %></td>
+            <td><%= ticket.sequence_number %></td>
+            <td><%= ticket.request_type %></td>
+            <td><%= ticket.response_due_date_time %></td>
+            <td><%= ticket.primary_service_area_code %></td>
+            <td><%= link_to 'Show', ticket_path(ticket) %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
